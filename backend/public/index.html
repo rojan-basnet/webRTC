@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>hi</h2>
+    <div>
+        <h1>Local video</h1>
+        <video id="localVideo" autoplay playsinline muted></video>
+    </div>
+    <div class="removeVidContainer">
+        <h1>remote video </h1>
+        <video  id="remoteVideo" autoplay playsinline></video>
+    </div>
+    <button id="startbtn">start</button>
+    <button id="callEnd">Call end</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

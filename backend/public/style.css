@@ -1,0 +1,21 @@
+#localVideo {
+    transform: scaleX(-1);
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+#localVideo video {
+    width: 100%;
+    height: 100%;
+}
+
+#remoteVideo {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+#remoteVideo video{
+    width: 100%;
+    height: 100%;
+}
