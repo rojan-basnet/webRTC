@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cd backend && nodemon server"
+    "dev": "cd backend && nodemon server",
+    "build":"npm install",
+    "start": "node backend/server.js"
   },
   "keywords": [],
   "author": "",
