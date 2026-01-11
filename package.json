@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cd backend && nodemon server",
+    "dev": "nodemon --env-file=.env backend/server.js",
     "build":"npm install",
-    "start": "node backend/server.js"
+    "start": "node --env-file=.env backend/server.js"
   },
   "keywords": [],
   "author": "",

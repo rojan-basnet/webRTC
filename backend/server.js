@@ -1,9 +1,11 @@
 import express from 'express';
 import http from 'http'
 import { Server } from 'socket.io';
+import cors from 'cors';
 
 
 const app=express()
+app.use(cors({origin: 'http://localhost:5500'}))
 
 app.use(express.json())
 const server = http.createServer(app);
