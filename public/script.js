@@ -63,9 +63,19 @@ function handleCallEnd() {
 
 async function makeCall() {
     pc = new RTCPeerConnection({
-        iceServers: [
-            { urls: "stun:stun.l.google.com:19302" }
-        ]
+  iceServers: [
+    { urls: "stun:stun.metered.ca:3478" },
+    {
+      urls: "turn:global.relay.metered.ca:80",
+      username: "35340fdf480622587c49a4fe",
+      credential: "rNLeqnlRgqcKRzRp"
+    },
+    {
+      urls: "turn:global.relay.metered.ca:443",
+      username: "35340fdf480622587c49a4fe",
+      credential: "rNLeqnlRgqcKRzRp"
+    }
+  ]
     });
 
     // ICE candidates
@@ -102,9 +112,6 @@ socket.on("offer", async (offer) => {
             { urls: "stun:stun.l.google.com:19302" }
         ]
     });
-
-
-
 
     pc.onicecandidate = event => {
         if (event.candidate) {
